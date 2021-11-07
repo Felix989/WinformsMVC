@@ -27,7 +27,7 @@ namespace R8ZAAJ.Views
             this.FoodDisplay.DataSource = _food_controller.getAllFood(); // EBBEN LESZNEK A CUCCOK, MAJD MINDIG FRISSíTENI KELL A VIEW-T
             this.Basket.DataSource = Form1.loggedInUser.Basket;
 
-            PriceTag.Text = CalculateBasketsWorth(Form1.loggedInUser).ToString();
+            CalculateBasketsWorth(Form1.loggedInUser);
         }
 
 
@@ -36,8 +36,10 @@ namespace R8ZAAJ.Views
             if(user.Basket != null)
             {
                 int worth = user.Basket.Sum(x => x.Price);
+                PriceTag.Text = worth.ToString();
                 return worth;
             }
+            PriceTag.Text = "0";
             return 0;
         }
 
@@ -60,7 +62,28 @@ namespace R8ZAAJ.Views
                 var foods = _food_controller.getAllFood();
                 var selected = foods.First(x => x.ID == SelectedFood);
                 Form1.loggedInUser.Basket.Add(selected);
+
+                this.Basket.DataSource = Form1.loggedInUser.Basket;
+                this.Basket.Update();
+                this.Basket.Refresh();
             }
+            CalculateBasketsWorth(Form1.loggedInUser);
+        }
+
+        private void RemoveItemFromCart(object sender, EventArgs e)
+        {
+            #pragma warning disable CS0472
+            if (SelectedFood != null)
+            {
+                var foods = _food_controller.getAllFood();
+                var selected = foods.First(x => x.ID == SelectedFood);
+                Form1.loggedInUser.Basket.Remove(selected);
+
+                this.Basket.DataSource = Form1.loggedInUser.Basket;
+                this.Basket.Update();
+                this.Basket.Refresh();
+            }
+            CalculateBasketsWorth(Form1.loggedInUser);
         }
     }
 }

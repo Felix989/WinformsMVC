@@ -48,8 +48,8 @@ namespace R8ZAAJ
             }
             else
             {
-                MessageBox.Show("All the fields are required!");
-                new Exception("Wrong Crendentials!");
+                //MessageBox.Show("All the fields are required!");
+                //new Exception("Wrong Crendentials!");
             }
         }
 

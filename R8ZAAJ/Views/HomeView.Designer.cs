@@ -71,6 +71,7 @@ namespace R8ZAAJ.Views
             this.Basket.RowTemplate.Height = 25;
             this.Basket.Size = new System.Drawing.Size(415, 162);
             this.Basket.TabIndex = 2;
+            this.Basket.SelectionChanged += new System.EventHandler(this.RemoveItemFromCart);
             // 
             // label1
             // 
