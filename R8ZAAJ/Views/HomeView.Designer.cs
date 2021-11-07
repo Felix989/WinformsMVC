@@ -62,6 +62,7 @@ namespace R8ZAAJ.Views
             this.button1.TabIndex = 1;
             this.button1.Text = "Show Previous Orders";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ShowPreviousOrders);
             // 
             // Basket
             // 

@@ -36,6 +36,33 @@ namespace R8ZAAJ.DAO.OrderDAO
             return foodHolder;
         }
 
+        public List<Food> getAllOrdersByUser(User user)
+        {
+            List<Food> foodHolder = new List<Food>();
+
+            using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
+            conn.Open();
+            SQLiteCommand command = conn.CreateCommand();
+            command.CommandText = "select * from Foods " +
+                                    "inner join Orders ON Foods.ID = Orders.FoodID " +
+                                    "inner join Users ON Orders.UserID = Users.ID";
+
+            using SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                var food = new Food(reader.GetInt32(reader.GetOrdinal("ID")),
+                                    reader.GetString(reader.GetOrdinal("Name")),
+                                    reader.GetString(reader.GetOrdinal("FoodName")),
+                                    reader.GetInt32(reader.GetOrdinal("Price")),
+                                    reader.GetInt32(reader.GetOrdinal("ExpectedShipping")),
+                                    reader.GetInt32(reader.GetOrdinal("Points"))
+                                    );
+                foodHolder.Add(food);
+            }
+            conn.Close();
+            return foodHolder;
+        }
+
         public bool MakeAnOrder(User loggedInUser)
         {
             foreach (var item in loggedInUser.Basket)
@@ -47,7 +74,11 @@ namespace R8ZAAJ.DAO.OrderDAO
                 command.Parameters.AddWithValue("@userID", loggedInUser.ID);
                 command.Parameters.AddWithValue("@foodID", item.ID);
                 if (command.ExecuteNonQuery() <= 0)
+                {
+                    conn.Close();
                     return false;
+                }
+                conn.Close();
                 return true;
             }
             return true;

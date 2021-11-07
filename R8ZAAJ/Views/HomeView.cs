@@ -63,6 +63,7 @@ namespace R8ZAAJ.Views
                 var selected = foods.First(x => x.ID == SelectedFood);
                 Form1.loggedInUser.Basket.Add(selected);
 
+                this._binding.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.Update();
                 this.Basket.Refresh();
@@ -89,6 +90,14 @@ namespace R8ZAAJ.Views
         private void OrderBasket(object sender, EventArgs e)
         {
             _food_controller.MakeAnOrder(Form1.loggedInUser);
+            MessageBox.Show("All the foods are ordered!");
+        }
+
+        private void ShowPreviousOrders(object sender, EventArgs e)
+        {
+            //this.Hide();
+            OrderHistoiryView view = new OrderHistoiryView();
+            view.Show();
         }
     }
 }

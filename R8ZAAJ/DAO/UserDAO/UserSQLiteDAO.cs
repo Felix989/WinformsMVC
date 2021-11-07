@@ -68,7 +68,11 @@ namespace R8ZAAJ.DAO
             command.Parameters.AddWithValue("@un", user.Username);
             command.Parameters.AddWithValue("@pw", user.Password);
             command.Prepare();
-            if (command.ExecuteNonQuery() <= 0) return false;
+            if (command.ExecuteNonQuery() <= 0) {
+                conn.Close();
+                return false;
+            }
+            conn.Close();
             return true;
         }
     }
