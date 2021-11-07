@@ -45,18 +45,20 @@ namespace R8ZAAJ.Views
             // 
             // BackButton
             // 
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.BackButton.Location = new System.Drawing.Point(350, 360);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 23);
             this.BackButton.TabIndex = 1;
             this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.Back);
             // 
             // OrderHistoiryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.HistoricGrid);

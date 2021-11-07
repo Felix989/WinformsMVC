@@ -56,12 +56,13 @@ namespace R8ZAAJ.Views
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.button1.Location = new System.Drawing.Point(581, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "Show Previous Orders";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.ShowPreviousOrders);
             // 
             // Basket
@@ -77,6 +78,7 @@ namespace R8ZAAJ.Views
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 15);
@@ -86,6 +88,7 @@ namespace R8ZAAJ.Views
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.label2.Location = new System.Drawing.Point(713, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
@@ -94,28 +97,31 @@ namespace R8ZAAJ.Views
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.button2.Location = new System.Drawing.Point(581, 432);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 47);
             this.button2.TabIndex = 5;
             this.button2.Text = "Order Basket";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.OrderBasket);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
             this.button3.Location = new System.Drawing.Point(66, 408);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 35);
             this.button3.TabIndex = 6;
             this.button3.Text = "Add To Basket";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.AddToBasket);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 332);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.label3.Location = new System.Drawing.Point(75, 348);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 7;
@@ -128,10 +134,12 @@ namespace R8ZAAJ.Views
             this.SelectedFoodDisplay.ReadOnly = true;
             this.SelectedFoodDisplay.Size = new System.Drawing.Size(183, 23);
             this.SelectedFoodDisplay.TabIndex = 8;
+            this.SelectedFoodDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.label4.Location = new System.Drawing.Point(903, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
@@ -141,6 +149,7 @@ namespace R8ZAAJ.Views
             // PriceTag
             // 
             this.PriceTag.AutoSize = true;
+            this.PriceTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.PriceTag.Location = new System.Drawing.Point(967, 305);
             this.PriceTag.Name = "PriceTag";
             this.PriceTag.Size = new System.Drawing.Size(13, 15);
@@ -151,6 +160,7 @@ namespace R8ZAAJ.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(1148, 515);
             this.Controls.Add(this.PriceTag);
             this.Controls.Add(this.label4);

@@ -39,12 +39,13 @@ namespace R8ZAAJ
             // 
             // LoginButton
             // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.LoginButton.Location = new System.Drawing.Point(97, 120);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.loginButtonPressed);
             // 
             // UsernameInput
@@ -64,17 +65,19 @@ namespace R8ZAAJ
             // 
             // RegisterButton
             // 
+            this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
             this.RegisterButton.Location = new System.Drawing.Point(189, 120);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(75, 23);
             this.RegisterButton.TabIndex = 3;
             this.RegisterButton.Text = "Register";
-            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.UseVisualStyleBackColor = false;
             this.RegisterButton.Click += new System.EventHandler(this.registerButtonPressed);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.label1.Location = new System.Drawing.Point(28, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 15);
@@ -84,6 +87,7 @@ namespace R8ZAAJ
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.label2.Location = new System.Drawing.Point(28, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
@@ -94,6 +98,7 @@ namespace R8ZAAJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(364, 173);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
