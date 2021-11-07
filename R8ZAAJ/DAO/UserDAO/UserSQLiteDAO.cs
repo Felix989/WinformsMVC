@@ -12,7 +12,7 @@ namespace R8ZAAJ.DAO
 {
     class UserSQLiteDAO : IUserDAO
     {
-        private readonly String _ConnectionString = @"Data Source = C:\DATA\Egyetem\Alkfejl2\Beadando02\R8ZAAJ\Database\Pizz.db";
+        private readonly String _ConnectionString = @"Data Source = C:\DATA\Programming\GIT\WinformsMVC - GIT\R8ZAAJ\Database\Pizz.db";
         public List<User> GetAllUser()
         {
             List<User> userHolder = new List<User>();

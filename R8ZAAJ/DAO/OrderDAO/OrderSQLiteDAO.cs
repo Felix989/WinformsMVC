@@ -10,7 +10,7 @@ namespace R8ZAAJ.DAO.OrderDAO
 {
     class OrderSQLiteDAO : IOrderDao
     {
-        private readonly String _ConnectionString = @"Data Source = C:\DATA\Egyetem\Alkfejl2\Beadando02\R8ZAAJ\Database\Pizz.db";
+        private readonly String _ConnectionString = @"Data Source = C:\DATA\Programming\GIT\WinformsMVC - GIT\R8ZAAJ\Database\Pizz.db";
         public List<Food> getAllFood()
         {
             List<Food> foodHolder = new List<Food>();
@@ -66,11 +66,11 @@ namespace R8ZAAJ.DAO.OrderDAO
 
         public bool MakeAnOrder(User loggedInUser)
         {
+            using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
+            conn.Open();
             foreach (var item in loggedInUser.Basket)
             {
 
-                using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
-                conn.Open();
                 using SQLiteCommand command = new("insert into Orders(UserID, FoodID) Values(@userID, @foodID)", conn);
                 command.Parameters.AddWithValue("@userID", loggedInUser.ID);
                 command.Parameters.AddWithValue("@foodID", item.ID);
@@ -79,9 +79,8 @@ namespace R8ZAAJ.DAO.OrderDAO
                     conn.Close();
                     return false;
                 }
-                conn.Close();
-                return true;
             }
+            conn.Close();
             return true;
         }
     }

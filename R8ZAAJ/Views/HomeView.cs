@@ -25,6 +25,9 @@ namespace R8ZAAJ.Views
             this._binding = new();
             this._binding.DataSource = _food_controller.getAllFood();
             this.FoodDisplay.DataSource = _food_controller.getAllFood(); // EBBEN LESZNEK A CUCCOK, MAJD MINDIG FRISSíTENI KELL A VIEW-T
+            
+            //this._binding = new();
+            //this._binding.DataSource = Form1.loggedInUser.Basket;
             this.Basket.DataSource = Form1.loggedInUser.Basket;
 
             CalculateBasketsWorth(Form1.loggedInUser);

@@ -109,7 +109,7 @@ namespace R8ZAAJ.Views
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
-            this.button3.Location = new System.Drawing.Point(66, 408);
+            this.button3.Location = new System.Drawing.Point(135, 419);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 35);
             this.button3.TabIndex = 6;
@@ -121,7 +121,7 @@ namespace R8ZAAJ.Views
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label3.Location = new System.Drawing.Point(75, 348);
+            this.label3.Location = new System.Drawing.Point(144, 359);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 7;
@@ -129,7 +129,7 @@ namespace R8ZAAJ.Views
             // 
             // SelectedFoodDisplay
             // 
-            this.SelectedFoodDisplay.Location = new System.Drawing.Point(23, 366);
+            this.SelectedFoodDisplay.Location = new System.Drawing.Point(92, 377);
             this.SelectedFoodDisplay.Name = "SelectedFoodDisplay";
             this.SelectedFoodDisplay.ReadOnly = true;
             this.SelectedFoodDisplay.Size = new System.Drawing.Size(183, 23);
