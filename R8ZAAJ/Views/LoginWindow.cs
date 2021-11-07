@@ -34,9 +34,11 @@ namespace R8ZAAJ
                 if (_controller.LogInUser(logger))
                 {
                     loggedInUser = logger;
+                    loggedInUser.Basket = new List<Food>();
                     MessageBox.Show(loggedInUser.Username + " is logged in!");
                     HomeView view = new HomeView();
                     view.Show();
+                    this.Hide();
                 }
                 else
                 {

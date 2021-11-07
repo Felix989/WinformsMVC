@@ -24,6 +24,7 @@ namespace R8ZAAJ.Model
             ID = id;
             Username = name;
             Password = pw;
+            List<Food> Basket = new List<Food>();
         }
 
         public override string ToString()

@@ -31,15 +31,17 @@ namespace R8ZAAJ.Views
         {
             this.FoodDisplay = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Basket = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SelectedFoodDisplay = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PriceTag = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basket)).BeginInit();
             this.SuspendLayout();
             // 
             // FoodDisplay
@@ -50,6 +52,7 @@ namespace R8ZAAJ.Views
             this.FoodDisplay.RowTemplate.Height = 25;
             this.FoodDisplay.Size = new System.Drawing.Size(1116, 245);
             this.FoodDisplay.TabIndex = 0;
+            this.FoodDisplay.SelectionChanged += new System.EventHandler(this.SelectionChanged);
             // 
             // button1
             // 
@@ -60,14 +63,14 @@ namespace R8ZAAJ.Views
             this.button1.Text = "Show Previous Orders";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // Basket
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(713, 332);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(415, 162);
-            this.dataGridView1.TabIndex = 2;
+            this.Basket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Basket.Location = new System.Drawing.Point(713, 332);
+            this.Basket.Name = "Basket";
+            this.Basket.RowTemplate.Height = 25;
+            this.Basket.Size = new System.Drawing.Size(415, 162);
+            this.Basket.TabIndex = 2;
             // 
             // label1
             // 
@@ -104,6 +107,7 @@ namespace R8ZAAJ.Views
             this.button3.TabIndex = 6;
             this.button3.Text = "Add To Basket";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.AddToBasket);
             // 
             // label3
             // 
@@ -114,31 +118,52 @@ namespace R8ZAAJ.Views
             this.label3.TabIndex = 7;
             this.label3.Text = "Selected Food";
             // 
-            // textBox1
+            // SelectedFoodDisplay
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 366);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 23);
-            this.textBox1.TabIndex = 8;
+            this.SelectedFoodDisplay.Location = new System.Drawing.Point(23, 366);
+            this.SelectedFoodDisplay.Name = "SelectedFoodDisplay";
+            this.SelectedFoodDisplay.ReadOnly = true;
+            this.SelectedFoodDisplay.Size = new System.Drawing.Size(183, 23);
+            this.SelectedFoodDisplay.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(903, 305);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Worth:";
+            // 
+            // PriceTag
+            // 
+            this.PriceTag.AutoSize = true;
+            this.PriceTag.Location = new System.Drawing.Point(967, 305);
+            this.PriceTag.Name = "PriceTag";
+            this.PriceTag.Size = new System.Drawing.Size(13, 15);
+            this.PriceTag.TabIndex = 10;
+            this.PriceTag.Text = "0";
             // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 515);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PriceTag);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.SelectedFoodDisplay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Basket);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FoodDisplay);
             this.Name = "HomeView";
             this.Text = "HomeView";
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Basket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +179,9 @@ namespace R8ZAAJ.Views
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SelectedFoodDisplay;
+        private System.Windows.Forms.DataGridView Basket;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label PriceTag;
     }
 }
