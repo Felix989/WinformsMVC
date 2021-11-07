@@ -17,6 +17,6 @@ namespace R8ZAAJ.Controls
         }
 
         public List<Food> getAllFood() => _dao.getAllFood();
-        public bool MakeAnOrder(User loggedInUser, List<Food> basketContent) => _dao.MakeAnOrder(loggedInUser, basketContent);
+        public bool MakeAnOrder(User loggedInUser) => _dao.MakeAnOrder(loggedInUser);
     }
 }

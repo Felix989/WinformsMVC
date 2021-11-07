@@ -85,5 +85,10 @@ namespace R8ZAAJ.Views
             }
             CalculateBasketsWorth(Form1.loggedInUser);
         }
+
+        private void OrderBasket(object sender, EventArgs e)
+        {
+            _food_controller.MakeAnOrder(Form1.loggedInUser);
+        }
     }
 }

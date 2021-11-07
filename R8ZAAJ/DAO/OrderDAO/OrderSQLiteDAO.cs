@@ -36,9 +36,21 @@ namespace R8ZAAJ.DAO.OrderDAO
             return foodHolder;
         }
 
-        public bool MakeAnOrder(User loggedInUser, List<Food> basketContent)
+        public bool MakeAnOrder(User loggedInUser)
         {
-            throw new NotImplementedException();
+            foreach (var item in loggedInUser.Basket)
+            {
+
+                using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
+                conn.Open();
+                using SQLiteCommand command = new("insert into Orders(UserID, FoodID) Values(@userID, @foodID)", conn);
+                command.Parameters.AddWithValue("@userID", loggedInUser.ID);
+                command.Parameters.AddWithValue("@foodID", item.ID);
+                if (command.ExecuteNonQuery() <= 0)
+                    return false;
+                return true;
+            }
+            return true;
         }
     }
 }

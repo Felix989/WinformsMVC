@@ -10,7 +10,7 @@ namespace R8ZAAJ.DAO.OrderDAO
     public interface IOrderDao
     {
         List<Food> getAllFood();
-        bool MakeAnOrder(User loggedInUser, List<Food> basketContent);
+        bool MakeAnOrder(User loggedInUser);
         //get all order by user
     }
 }
