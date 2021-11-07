@@ -11,5 +11,6 @@ namespace R8ZAAJ.DAO.OrderDAO
     {
         List<Food> getAllFood();
         bool MakeAnOrder(User loggedInUser, List<Food> basketContent);
+        //get all order by user
     }
 }
