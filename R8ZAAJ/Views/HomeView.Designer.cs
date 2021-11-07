@@ -39,14 +39,14 @@ namespace R8ZAAJ.Views
             this.FoodDisplay.Location = new System.Drawing.Point(12, 12);
             this.FoodDisplay.Name = "FoodDisplay";
             this.FoodDisplay.RowTemplate.Height = 25;
-            this.FoodDisplay.Size = new System.Drawing.Size(448, 276);
+            this.FoodDisplay.Size = new System.Drawing.Size(1294, 272);
             this.FoodDisplay.TabIndex = 0;
             // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1333, 515);
             this.Controls.Add(this.FoodDisplay);
             this.Name = "HomeView";
             this.Text = "HomeView";
