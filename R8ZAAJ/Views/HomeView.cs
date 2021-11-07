@@ -17,7 +17,7 @@ namespace R8ZAAJ.Views
     {
         private BindingSource _binding;
         private FoodController _food_controller;
-        private int SelectedFood;
+        private int SelectedFood = int.MaxValue;
         public HomeView()
         {
             InitializeComponent();
@@ -57,12 +57,13 @@ namespace R8ZAAJ.Views
         private void AddToBasket(object sender, EventArgs e)
         {
             #pragma warning disable CS0472
-            if (SelectedFood != null)
+            if (SelectedFood != null && SelectedFood != 2147483647)
             {
                 var foods = _food_controller.getAllFood();
                 var selected = foods.First(x => x.ID == SelectedFood);
                 Form1.loggedInUser.Basket.Add(selected);
-
+                _binding.ResetBindings(false);
+                this._binding = new();
                 this._binding.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.Update();
@@ -74,12 +75,14 @@ namespace R8ZAAJ.Views
         private void RemoveItemFromCart(object sender, EventArgs e)
         {
             #pragma warning disable CS0472
-            if (SelectedFood != null)
+            if (SelectedFood != null && SelectedFood != 2147483647)
             {
                 var foods = _food_controller.getAllFood();
                 var selected = foods.First(x => x.ID == SelectedFood);
                 Form1.loggedInUser.Basket.Remove(selected);
-
+                _binding.ResetBindings(false);
+                this._binding = new();
+                this._binding.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.Update();
                 this.Basket.Refresh();
