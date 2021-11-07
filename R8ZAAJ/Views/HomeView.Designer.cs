@@ -186,7 +186,6 @@ namespace R8ZAAJ.Views
 
         private System.Windows.Forms.DataGridView FoodDisplay;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;

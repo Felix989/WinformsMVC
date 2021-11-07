@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace R8ZAAJ.Model
 {
@@ -29,7 +26,7 @@ namespace R8ZAAJ.Model
 
         public override string ToString()
         {
-            return "ID: " + this.ID + "; Name: " + this.Username +"; Password: " + this.Password;
+            return "ID: " + this.ID + "; Name: " + this.Username + "; Password: " + this.Password;
         }
     }
 }

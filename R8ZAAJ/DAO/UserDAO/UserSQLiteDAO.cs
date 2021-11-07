@@ -4,9 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace R8ZAAJ.DAO
 {
@@ -68,7 +65,8 @@ namespace R8ZAAJ.DAO
             command.Parameters.AddWithValue("@un", user.Username);
             command.Parameters.AddWithValue("@pw", user.Password);
             command.Prepare();
-            if (command.ExecuteNonQuery() <= 0) {
+            if (command.ExecuteNonQuery() <= 0)
+            {
                 conn.Close();
                 return false;
             }

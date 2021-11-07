@@ -2,13 +2,7 @@
 using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace R8ZAAJ.Views
@@ -41,7 +35,7 @@ namespace R8ZAAJ.Views
 
         public int CalculateBasketsWorth(User user)
         {
-            if(user.Basket != null)
+            if (user.Basket != null)
             {
                 int worth = user.Basket.Sum(x => x.Price);
                 PriceTag.Text = worth.ToString();
@@ -64,7 +58,7 @@ namespace R8ZAAJ.Views
 
         private void AddToBasket(object sender, EventArgs e)
         {
-            #pragma warning disable CS0472
+#pragma warning disable CS0472
             if (SelectedFood != null && SelectedFood != 2147483647)
             {
                 var foods = _food_controller.getAllFood();
@@ -87,7 +81,7 @@ namespace R8ZAAJ.Views
 
         private void RemoveItemFromCart(object sender, EventArgs e)
         {
-            #pragma warning disable CS0472
+#pragma warning disable CS0472
             if (SelectedFood != null && SelectedFood != 2147483647)
             {
                 //var foods = _food_controller.getAllFood();
