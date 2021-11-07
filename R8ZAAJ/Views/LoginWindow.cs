@@ -28,7 +28,7 @@ namespace R8ZAAJ
 
         private void loginButtonPressed(object sender, EventArgs e)
         {
-            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null)
+            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null && this.UsernameInput.Text != "" && this.PasswordInput.Text != "")
             {
                 User logger = new User(this.UsernameInput.Text, this.PasswordInput.Text);
                 if (_controller.LogInUser(logger))
@@ -44,11 +44,16 @@ namespace R8ZAAJ
                     new Exception("Wrong Crendentials!");
                 }
             }
+            else
+            {
+                MessageBox.Show("All the fields are required!");
+                new Exception("Wrong Crendentials!");
+            }
         }
 
         private void registerButtonPressed(object sender, EventArgs e)
         {
-            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null)
+            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null && this.UsernameInput.Text != "" && this.PasswordInput.Text != "")
             {
                 User register = new User(this.UsernameInput.Text, this.PasswordInput.Text);
                 if (_controller.RegisterUser(register))
@@ -60,6 +65,11 @@ namespace R8ZAAJ
                     MessageBox.Show(register.Username + " was not registered!");
                     new Exception("Cannot register user!");
                 }
+            }
+            else
+            {
+                MessageBox.Show("All the fields are required!");
+                new Exception("Wrong Crendentials!");
             }
         }
     }
