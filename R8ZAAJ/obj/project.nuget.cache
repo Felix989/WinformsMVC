@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "aBk1s8n1RyYxqR5vqZJuqctDsis1Ha80loiod2IMBYA/s4YeCMnIfp++jK/ajd1thN0jh+TigZLlSiQRLxwUQQ==",
+  "success": true,
+  "projectFilePath": "C:\\DATA\\Egyetem\\Alkfejl2\\Beadando02\\R8ZAAJ\\R8ZAAJ.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Csaba\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.11\\microsoft.data.sqlite.core.5.0.11.nupkg.sha512",
+    "C:\\Users\\Csaba\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\Csaba\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\Csaba\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.115.5\\stub.system.data.sqlite.core.netstandard.1.0.115.5.nupkg.sha512",
+    "C:\\Users\\Csaba\\.nuget\\packages\\system.data.sqlite.core\\1.0.115.5\\system.data.sqlite.core.1.0.115.5.nupkg.sha512",
+    "C:\\Users\\Csaba\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
