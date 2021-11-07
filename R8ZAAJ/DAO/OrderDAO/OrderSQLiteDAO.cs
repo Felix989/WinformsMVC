@@ -45,8 +45,9 @@ namespace R8ZAAJ.DAO.OrderDAO
             SQLiteCommand command = conn.CreateCommand();
             command.CommandText = "select * from Foods " +
                                     "inner join Orders ON Foods.ID = Orders.FoodID " +
-                                    "inner join Users ON Orders.UserID = Users.ID";
+                                    "inner join Users ON Orders.UserID = Users.ID where Users.ID = @id";
 
+            command.Parameters.AddWithValue("@ID", user.ID);
             using SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
