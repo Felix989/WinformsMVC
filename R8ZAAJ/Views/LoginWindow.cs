@@ -73,8 +73,4 @@ namespace R8ZAAJ
             }
         }
     }
-
-    internal class Nullalbe<T>
-    {
-    }
 }
