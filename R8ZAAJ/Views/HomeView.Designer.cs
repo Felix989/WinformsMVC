@@ -29,12 +29,34 @@ namespace R8ZAAJ.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.FoodDisplay = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // FoodDisplay
+            // 
+            this.FoodDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FoodDisplay.Location = new System.Drawing.Point(12, 12);
+            this.FoodDisplay.Name = "FoodDisplay";
+            this.FoodDisplay.RowTemplate.Height = 25;
+            this.FoodDisplay.Size = new System.Drawing.Size(448, 276);
+            this.FoodDisplay.TabIndex = 0;
+            // 
+            // HomeView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FoodDisplay);
+            this.Name = "HomeView";
             this.Text = "HomeView";
+            ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView FoodDisplay;
     }
 }

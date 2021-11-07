@@ -2,6 +2,7 @@
 using R8ZAAJ.DAO;
 using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
+using R8ZAAJ.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,14 +19,10 @@ namespace R8ZAAJ
     {
         public static User loggedInUser;
         private UserController _controller;
-        private FoodController _food_controller;
 
         public Form1()
         {
             _controller = new(new UserSQLiteDAO());
-            _food_controller = new(new OrderSQLiteDAO());
-
-            var test = _food_controller.getAllFood();
             InitializeComponent();
         }
 
@@ -37,6 +34,8 @@ namespace R8ZAAJ
             {
                 loggedInUser = logger;
                 MessageBox.Show(loggedInUser.Username + " is logged in!");
+                HomeView view = new HomeView();
+                view.Show();
             }
             else
             {
