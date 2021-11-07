@@ -28,33 +28,38 @@ namespace R8ZAAJ
 
         private void loginButtonPressed(object sender, EventArgs e)
         {
-
-            User logger = new User(this.UsernameInput.Text, this.PasswordInput.Text);
-            if (_controller.LogInUser(logger))
+            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null)
             {
-                loggedInUser = logger;
-                MessageBox.Show(loggedInUser.Username + " is logged in!");
-                HomeView view = new HomeView();
-                view.Show();
-            }
-            else
-            {
-                MessageBox.Show(logger.Username + " was not found!");
-                new Exception("Wrong Crendentials!");
+                User logger = new User(this.UsernameInput.Text, this.PasswordInput.Text);
+                if (_controller.LogInUser(logger))
+                {
+                    loggedInUser = logger;
+                    MessageBox.Show(loggedInUser.Username + " is logged in!");
+                    HomeView view = new HomeView();
+                    view.Show();
+                }
+                else
+                {
+                    MessageBox.Show(logger.Username + " was not found!");
+                    new Exception("Wrong Crendentials!");
+                }
             }
         }
 
         private void registerButtonPressed(object sender, EventArgs e)
         {
-            User register = new User(this.UsernameInput.Text, this.PasswordInput.Text);
-            if (_controller.RegisterUser(register))
+            if (this.UsernameInput.Text != null && this.PasswordInput.Text != null)
             {
-                MessageBox.Show(register.Username + " was registered!");
-            }
-            else
-            {
-                MessageBox.Show(register.Username + " was not registered!");
-                new Exception("Cannot register user!");
+                User register = new User(this.UsernameInput.Text, this.PasswordInput.Text);
+                if (_controller.RegisterUser(register))
+                {
+                    MessageBox.Show(register.Username + " was registered!");
+                }
+                else
+                {
+                    MessageBox.Show(register.Username + " was not registered!");
+                    new Exception("Cannot register user!");
+                }
             }
         }
     }
