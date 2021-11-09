@@ -29,6 +29,7 @@ namespace R8ZAAJ.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderHistoiryView));
             this.HistoricGrid = new System.Windows.Forms.DataGridView();
             this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HistoricGrid)).BeginInit();
@@ -63,9 +64,11 @@ namespace R8ZAAJ.Views
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.HistoricGrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrderHistoiryView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderHistoiryView";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.HistoricGrid)).EndInit();
             this.ResumeLayout(false);
 

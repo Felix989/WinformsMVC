@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomPrompt));
             this.CloseButton = new System.Windows.Forms.Button();
             this.MessageText = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -66,9 +67,13 @@
             this.ClientSize = new System.Drawing.Size(291, 140);
             this.Controls.Add(this.MessageText);
             this.Controls.Add(this.CloseButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomPrompt";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomPrompt";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

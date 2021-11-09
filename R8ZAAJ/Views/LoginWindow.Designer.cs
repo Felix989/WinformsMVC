@@ -29,6 +29,7 @@ namespace R8ZAAJ
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LoginButton = new System.Windows.Forms.Button();
             this.UsernameInput = new System.Windows.Forms.TextBox();
             this.PasswordInput = new System.Windows.Forms.TextBox();
@@ -121,6 +122,7 @@ namespace R8ZAAJ
             this.Controls.Add(this.PasswordInput);
             this.Controls.Add(this.UsernameInput);
             this.Controls.Add(this.LoginButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

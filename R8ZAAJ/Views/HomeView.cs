@@ -118,9 +118,17 @@ namespace R8ZAAJ.Views
 
         private void OrderBasket(object sender, EventArgs e)
         {
-            _food_controller.MakeAnOrder(Form1.loggedInUser);
-            CustomPrompt prompt = new CustomPrompt("All the foods are ordered!");
-            prompt.ShowDialog();
+            if(Form1.loggedInUser.Basket.Count != 0 && Form1.loggedInUser.Basket.Count != null)
+            {
+                _food_controller.MakeAnOrder(Form1.loggedInUser);
+                CustomPrompt prompt = new CustomPrompt("All the foods are ordered!");
+                prompt.ShowDialog();
+            }
+            else
+            {
+                CustomPrompt prompt = new CustomPrompt("Cannot order empty basket!");
+                prompt.ShowDialog();
+            }
         }
 
         private void ShowPreviousOrders(object sender, EventArgs e)
