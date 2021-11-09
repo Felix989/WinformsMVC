@@ -44,9 +44,11 @@ namespace R8ZAAJ.Views
             this.CloseThis = new System.Windows.Forms.Button();
             this.ClearBasketButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.amountCounter = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.amountCounter)).BeginInit();
             this.SuspendLayout();
             // 
             // FoodDisplay
@@ -117,7 +119,7 @@ namespace R8ZAAJ.Views
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
-            this.button3.Location = new System.Drawing.Point(66, 424);
+            this.button3.Location = new System.Drawing.Point(62, 411);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 35);
             this.button3.TabIndex = 6;
@@ -129,7 +131,7 @@ namespace R8ZAAJ.Views
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label3.Location = new System.Drawing.Point(75, 364);
+            this.label3.Location = new System.Drawing.Point(62, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 7;
@@ -140,7 +142,7 @@ namespace R8ZAAJ.Views
             this.SelectedFoodDisplay.Location = new System.Drawing.Point(23, 382);
             this.SelectedFoodDisplay.Name = "SelectedFoodDisplay";
             this.SelectedFoodDisplay.ReadOnly = true;
-            this.SelectedFoodDisplay.Size = new System.Drawing.Size(183, 23);
+            this.SelectedFoodDisplay.Size = new System.Drawing.Size(157, 23);
             this.SelectedFoodDisplay.TabIndex = 8;
             this.SelectedFoodDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -201,12 +203,35 @@ namespace R8ZAAJ.Views
             this.panel1.Size = new System.Drawing.Size(575, 213);
             this.panel1.TabIndex = 13;
             // 
+            // amountCounter
+            // 
+            this.amountCounter.Location = new System.Drawing.Point(186, 383);
+            this.amountCounter.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.amountCounter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.amountCounter.Name = "amountCounter";
+            this.amountCounter.Size = new System.Drawing.Size(33, 23);
+            this.amountCounter.TabIndex = 14;
+            this.amountCounter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(822, 515);
+            this.Controls.Add(this.amountCounter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CloseThis);
             this.Controls.Add(this.SelectedFoodDisplay);
@@ -223,6 +248,7 @@ namespace R8ZAAJ.Views
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.amountCounter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +270,6 @@ namespace R8ZAAJ.Views
         private System.Windows.Forms.Button CloseThis;
         private System.Windows.Forms.Button ClearBasketButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NumericUpDown amountCounter;
     }
 }

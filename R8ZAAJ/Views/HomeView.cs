@@ -99,9 +99,14 @@ namespace R8ZAAJ.Views
 #pragma warning disable CS0472
             if (SelectedFood != null && SelectedFood != 2147483647)
             {
+               
                 var foods = _food_controller.getAllFood();
                 var selected = foods.First(x => x.ID == SelectedFood);
-                Form1.loggedInUser.Basket.Add(selected);
+
+                for (int i = 0; i < amountCounter.Value; i++)
+                {
+                    Form1.loggedInUser.Basket.Add(selected);
+                }
 
                 bs.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.DataSource = bs;
