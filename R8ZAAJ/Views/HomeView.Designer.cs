@@ -40,6 +40,7 @@ namespace R8ZAAJ.Views
             this.SelectedFoodDisplay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PriceTag = new System.Windows.Forms.Label();
+            this.CloseThis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).BeginInit();
             this.SuspendLayout();
@@ -47,8 +48,10 @@ namespace R8ZAAJ.Views
             // FoodDisplay
             // 
             this.FoodDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FoodDisplay.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.FoodDisplay.Location = new System.Drawing.Point(12, 39);
             this.FoodDisplay.Name = "FoodDisplay";
+            this.FoodDisplay.ReadOnly = true;
             this.FoodDisplay.RowTemplate.Height = 25;
             this.FoodDisplay.Size = new System.Drawing.Size(1116, 245);
             this.FoodDisplay.TabIndex = 0;
@@ -70,6 +73,7 @@ namespace R8ZAAJ.Views
             this.Basket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Basket.Location = new System.Drawing.Point(713, 332);
             this.Basket.Name = "Basket";
+            this.Basket.ReadOnly = true;
             this.Basket.RowTemplate.Height = 25;
             this.Basket.Size = new System.Drawing.Size(415, 162);
             this.Basket.TabIndex = 2;
@@ -156,12 +160,24 @@ namespace R8ZAAJ.Views
             this.PriceTag.TabIndex = 10;
             this.PriceTag.Text = "0";
             // 
+            // CloseThis
+            // 
+            this.CloseThis.ForeColor = System.Drawing.Color.IndianRed;
+            this.CloseThis.Location = new System.Drawing.Point(1100, 9);
+            this.CloseThis.Name = "CloseThis";
+            this.CloseThis.Size = new System.Drawing.Size(28, 23);
+            this.CloseThis.TabIndex = 11;
+            this.CloseThis.Text = "X";
+            this.CloseThis.UseVisualStyleBackColor = true;
+            this.CloseThis.Click += new System.EventHandler(this.CloseWindow);
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(1148, 515);
+            this.Controls.Add(this.CloseThis);
             this.Controls.Add(this.PriceTag);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SelectedFoodDisplay);
@@ -174,6 +190,7 @@ namespace R8ZAAJ.Views
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FoodDisplay);
             this.Name = "HomeView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeView";
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).EndInit();
@@ -195,5 +212,6 @@ namespace R8ZAAJ.Views
         private System.Windows.Forms.DataGridView Basket;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label PriceTag;
+        private System.Windows.Forms.Button CloseThis;
     }
 }

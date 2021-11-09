@@ -35,6 +35,7 @@ namespace R8ZAAJ
             this.RegisterButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginButton
@@ -54,6 +55,7 @@ namespace R8ZAAJ
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.Size = new System.Drawing.Size(186, 23);
             this.UsernameInput.TabIndex = 1;
+            this.UsernameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PasswordInput
             // 
@@ -62,6 +64,7 @@ namespace R8ZAAJ
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.Size = new System.Drawing.Size(135, 23);
             this.PasswordInput.TabIndex = 2;
+            this.PasswordInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RegisterButton
             // 
@@ -94,12 +97,24 @@ namespace R8ZAAJ
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.ForeColor = System.Drawing.Color.IndianRed;
+            this.CloseButton.Location = new System.Drawing.Point(316, 21);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(26, 23);
+            this.CloseButton.TabIndex = 6;
+            this.CloseButton.Text = "X";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(364, 173);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterButton);
@@ -107,6 +122,7 @@ namespace R8ZAAJ
             this.Controls.Add(this.UsernameInput);
             this.Controls.Add(this.LoginButton);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.loginButtonPressed);
             this.ResumeLayout(false);
@@ -122,6 +138,7 @@ namespace R8ZAAJ
         private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button CloseButton;
     }
 }
 

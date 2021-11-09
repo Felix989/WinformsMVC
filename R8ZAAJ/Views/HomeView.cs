@@ -3,6 +3,7 @@ using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace R8ZAAJ.Views
@@ -13,6 +14,16 @@ namespace R8ZAAJ.Views
         private FoodController _food_controller;
         private int SelectedFood = int.MaxValue;
         public BindingSource bs = new BindingSource();
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
         public HomeView()
         {
             InitializeComponent();
@@ -20,6 +31,8 @@ namespace R8ZAAJ.Views
             this._binding = new();
             this._binding.DataSource = _food_controller.getAllFood();
             this.FoodDisplay.DataSource = _food_controller.getAllFood(); // EBBEN LESZNEK A CUCCOK, MAJD MINDIG FRISSíTENI KELL A VIEW-T
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
 
 
@@ -114,6 +127,11 @@ namespace R8ZAAJ.Views
             //this.Hide();
             OrderHistoiryView view = new OrderHistoiryView();
             view.Show();
+        }
+
+        private void CloseWindow(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

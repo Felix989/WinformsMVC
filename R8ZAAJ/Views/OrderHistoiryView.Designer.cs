@@ -39,6 +39,7 @@ namespace R8ZAAJ.Views
             this.HistoricGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HistoricGrid.Location = new System.Drawing.Point(27, 24);
             this.HistoricGrid.Name = "HistoricGrid";
+            this.HistoricGrid.ReadOnly = true;
             this.HistoricGrid.RowTemplate.Height = 25;
             this.HistoricGrid.Size = new System.Drawing.Size(727, 283);
             this.HistoricGrid.TabIndex = 0;
@@ -63,6 +64,7 @@ namespace R8ZAAJ.Views
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.HistoricGrid);
             this.Name = "OrderHistoiryView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderHistoiryView";
             ((System.ComponentModel.ISupportInitialize)(this.HistoricGrid)).EndInit();
             this.ResumeLayout(false);
