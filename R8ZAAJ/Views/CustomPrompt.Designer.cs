@@ -74,6 +74,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomPrompt";
             this.TopMost = true;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CustomPrompt_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

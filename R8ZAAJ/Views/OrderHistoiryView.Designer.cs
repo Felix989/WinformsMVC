@@ -69,6 +69,7 @@ namespace R8ZAAJ.Views
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderHistoiryView";
             this.TopMost = true;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OrderHistoiryView_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.HistoricGrid)).EndInit();
             this.ResumeLayout(false);
 

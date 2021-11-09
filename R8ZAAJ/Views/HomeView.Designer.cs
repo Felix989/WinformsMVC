@@ -194,6 +194,7 @@ namespace R8ZAAJ.Views
             this.Name = "HomeView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeView";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomeView_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).EndInit();
             this.ResumeLayout(false);
