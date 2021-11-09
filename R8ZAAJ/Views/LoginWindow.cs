@@ -43,14 +43,16 @@ namespace R8ZAAJ
                 {
                     loggedInUser = logger;
                     loggedInUser.Basket = new List<Food>();
-                    MessageBox.Show(loggedInUser.Username + " is logged in!");
+                    CustomPrompt prompt = new CustomPrompt(loggedInUser.Username + " is logged in!");
+                    prompt.ShowDialog();
                     HomeView view = new HomeView();
                     view.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show(logger.Username + " was not found!");
+                    CustomPrompt prompt = new CustomPrompt(logger.Username + " was not found!");
+                    prompt.ShowDialog();
                     new Exception("Wrong Crendentials!");
                 }
             }
@@ -68,17 +70,20 @@ namespace R8ZAAJ
                 User register = new User(this.UsernameInput.Text, this.PasswordInput.Text);
                 if (_controller.RegisterUser(register))
                 {
-                    MessageBox.Show(register.Username + " was registered!");
+                    CustomPrompt prompt = new CustomPrompt(register.Username + " was registered!");
+                    prompt.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show(register.Username + " was not registered!");
+                    CustomPrompt prompt = new CustomPrompt(register.Username + " was not registered!");
+                    prompt.ShowDialog();
                     new Exception("Cannot register user!");
                 }
             }
             else
             {
-                MessageBox.Show("All the fields are required!");
+                CustomPrompt prompt = new CustomPrompt("All the fields are required!");
+                prompt.ShowDialog();
                 new Exception("Wrong Crendentials!");
             }
         }

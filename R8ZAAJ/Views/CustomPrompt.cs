@@ -1,15 +1,18 @@
-﻿using R8ZAAJ.Controls;
-using R8ZAAJ.DAO.OrderDAO;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace R8ZAAJ.Views
 {
-    public partial class OrderHistoiryView : Form
+    public partial class CustomPrompt : Form
     {
-        private BindingSource _binding;
-        private FoodController _food_controller;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -20,26 +23,17 @@ namespace R8ZAAJ.Views
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        public OrderHistoiryView()
+        public CustomPrompt(String message)
         {
             InitializeComponent();
-            _food_controller = new(new OrderSQLiteDAO());
-            this._binding = new();
-            this._binding.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser);
-            this.HistoricGrid.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser);
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-            //if(_food_controller.getAllOrdersByUser(Form1.loggedInUser).Count == null)
-            //{
-            //    CustomPrompt prompt = new CustomPrompt("No historical orders were found!");
-            //    prompt.ShowDialog();
-            //}
+            MessageText.Text = message;
         }
 
-        private void Back(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

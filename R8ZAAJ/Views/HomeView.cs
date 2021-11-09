@@ -119,7 +119,8 @@ namespace R8ZAAJ.Views
         private void OrderBasket(object sender, EventArgs e)
         {
             _food_controller.MakeAnOrder(Form1.loggedInUser);
-            MessageBox.Show("All the foods are ordered!");
+            CustomPrompt prompt = new CustomPrompt("All the foods are ordered!");
+            prompt.ShowDialog();
         }
 
         private void ShowPreviousOrders(object sender, EventArgs e)
