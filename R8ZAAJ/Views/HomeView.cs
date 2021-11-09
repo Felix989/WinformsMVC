@@ -148,6 +148,7 @@ namespace R8ZAAJ.Views
                 _food_controller.MakeAnOrder(Form1.loggedInUser);
                 CustomPrompt prompt = new CustomPrompt("All the foods are ordered!");
                 prompt.ShowDialog();
+                clearBasket();
             }
             else
             {
@@ -179,6 +180,12 @@ namespace R8ZAAJ.Views
 
         private void ClearBasketButton_Click(object sender, EventArgs e)
         {
+            clearBasket();
+        }
+
+        private void clearBasket()
+        {
+
             Form1.loggedInUser.Basket = new List<Food>();
 
             bs.DataSource = Form1.loggedInUser.Basket;
