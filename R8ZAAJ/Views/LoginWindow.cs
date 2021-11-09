@@ -46,8 +46,8 @@ namespace R8ZAAJ
                     CustomPrompt prompt = new CustomPrompt(loggedInUser.Username + " is logged in!");
                     prompt.ShowDialog();
                     HomeView view = new HomeView();
-                    view.Show();
                     this.Hide();
+                    view.Show();
                 }
                 else
                 {

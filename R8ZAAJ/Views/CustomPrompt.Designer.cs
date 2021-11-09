@@ -49,12 +49,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MessageText.AutoSize = true;
+            this.MessageText.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MessageText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.MessageText.Location = new System.Drawing.Point(124, 58);
+            this.MessageText.Location = new System.Drawing.Point(12, 57);
             this.MessageText.Name = "MessageText";
-            this.MessageText.Size = new System.Drawing.Size(38, 15);
+            this.MessageText.Size = new System.Drawing.Size(59, 25);
             this.MessageText.TabIndex = 8;
             this.MessageText.Text = "label1";
+            this.MessageText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CustomPrompt
             // 
