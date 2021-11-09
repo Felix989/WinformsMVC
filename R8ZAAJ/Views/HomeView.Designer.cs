@@ -61,7 +61,7 @@ namespace R8ZAAJ.Views
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
             this.button1.Location = new System.Drawing.Point(581, 332);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 47);
