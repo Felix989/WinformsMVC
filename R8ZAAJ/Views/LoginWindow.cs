@@ -4,6 +4,7 @@ using R8ZAAJ.Model;
 using R8ZAAJ.Views;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -37,6 +38,16 @@ namespace R8ZAAJ
         {
             _controller = new(new UserSQLiteDAO());
             InitializeComponent();
+
+            CloseButton.BackColor = Color.FromArgb(87, 81, 81);
+            CloseButton.FlatStyle = FlatStyle.Flat;
+            CloseButton.FlatAppearance.BorderSize = 0;
+
+            LoginButton.FlatStyle = FlatStyle.Flat;
+            LoginButton.FlatAppearance.BorderSize = 0;
+            RegisterButton.FlatStyle = FlatStyle.Flat;
+            RegisterButton.FlatAppearance.BorderSize = 0;
+
             this.PasswordInput.PasswordChar = '*';
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));

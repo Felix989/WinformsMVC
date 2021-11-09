@@ -37,6 +37,12 @@ namespace R8ZAAJ.Views
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             MessageText.Text = message;
+
+
+
+            CloseButton.BackColor = Color.FromArgb(254, 176, 98);
+            CloseButton.FlatStyle = FlatStyle.Flat;
+            CloseButton.FlatAppearance.BorderSize = 0;
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

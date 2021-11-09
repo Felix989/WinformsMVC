@@ -34,6 +34,8 @@ namespace R8ZAAJ.Views
         public OrderHistoiryView()
         {
             InitializeComponent();
+            BackButton.FlatStyle = FlatStyle.Flat;
+            BackButton.FlatAppearance.BorderSize = 0;
             _food_controller = new(new OrderSQLiteDAO());
             this._binding = new();
             this._binding.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser);

@@ -55,14 +55,14 @@ namespace R8ZAAJ.Views
             this.FoodDisplay.Name = "FoodDisplay";
             this.FoodDisplay.ReadOnly = true;
             this.FoodDisplay.RowTemplate.Height = 25;
-            this.FoodDisplay.Size = new System.Drawing.Size(1116, 245);
+            this.FoodDisplay.Size = new System.Drawing.Size(795, 245);
             this.FoodDisplay.TabIndex = 0;
             this.FoodDisplay.SelectionChanged += new System.EventHandler(this.SelectionChanged);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Location = new System.Drawing.Point(581, 332);
+            this.button1.Location = new System.Drawing.Point(260, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 47);
             this.button1.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace R8ZAAJ.Views
             // Basket
             // 
             this.Basket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Basket.Location = new System.Drawing.Point(713, 332);
+            this.Basket.Location = new System.Drawing.Point(392, 330);
             this.Basket.Name = "Basket";
             this.Basket.ReadOnly = true;
             this.Basket.RowTemplate.Height = 25;
@@ -95,7 +95,7 @@ namespace R8ZAAJ.Views
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label2.Location = new System.Drawing.Point(713, 305);
+            this.label2.Location = new System.Drawing.Point(392, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace R8ZAAJ.Views
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(581, 395);
+            this.button2.Location = new System.Drawing.Point(260, 393);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 47);
             this.button2.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace R8ZAAJ.Views
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
-            this.button3.Location = new System.Drawing.Point(135, 419);
+            this.button3.Location = new System.Drawing.Point(66, 424);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 35);
             this.button3.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace R8ZAAJ.Views
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label3.Location = new System.Drawing.Point(144, 359);
+            this.label3.Location = new System.Drawing.Point(75, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 7;
@@ -135,7 +135,7 @@ namespace R8ZAAJ.Views
             // 
             // SelectedFoodDisplay
             // 
-            this.SelectedFoodDisplay.Location = new System.Drawing.Point(92, 377);
+            this.SelectedFoodDisplay.Location = new System.Drawing.Point(23, 382);
             this.SelectedFoodDisplay.Name = "SelectedFoodDisplay";
             this.SelectedFoodDisplay.ReadOnly = true;
             this.SelectedFoodDisplay.Size = new System.Drawing.Size(183, 23);
@@ -146,7 +146,7 @@ namespace R8ZAAJ.Views
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label4.Location = new System.Drawing.Point(903, 305);
+            this.label4.Location = new System.Drawing.Point(582, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 9;
@@ -156,7 +156,7 @@ namespace R8ZAAJ.Views
             // 
             this.PriceTag.AutoSize = true;
             this.PriceTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.PriceTag.Location = new System.Drawing.Point(967, 305);
+            this.PriceTag.Location = new System.Drawing.Point(646, 303);
             this.PriceTag.Name = "PriceTag";
             this.PriceTag.Size = new System.Drawing.Size(13, 15);
             this.PriceTag.TabIndex = 10;
@@ -165,7 +165,7 @@ namespace R8ZAAJ.Views
             // CloseThis
             // 
             this.CloseThis.ForeColor = System.Drawing.Color.IndianRed;
-            this.CloseThis.Location = new System.Drawing.Point(1100, 9);
+            this.CloseThis.Location = new System.Drawing.Point(779, 13);
             this.CloseThis.Name = "CloseThis";
             this.CloseThis.Size = new System.Drawing.Size(28, 23);
             this.CloseThis.TabIndex = 11;
@@ -176,7 +176,7 @@ namespace R8ZAAJ.Views
             // ClearBasketButton
             // 
             this.ClearBasketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
-            this.ClearBasketButton.Location = new System.Drawing.Point(593, 458);
+            this.ClearBasketButton.Location = new System.Drawing.Point(272, 456);
             this.ClearBasketButton.Name = "ClearBasketButton";
             this.ClearBasketButton.Size = new System.Drawing.Size(87, 27);
             this.ClearBasketButton.TabIndex = 12;
@@ -189,7 +189,7 @@ namespace R8ZAAJ.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.ClientSize = new System.Drawing.Size(1148, 515);
+            this.ClientSize = new System.Drawing.Size(822, 515);
             this.Controls.Add(this.ClearBasketButton);
             this.Controls.Add(this.CloseThis);
             this.Controls.Add(this.PriceTag);

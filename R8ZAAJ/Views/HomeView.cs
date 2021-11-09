@@ -3,6 +3,7 @@ using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -43,6 +44,20 @@ namespace R8ZAAJ.Views
             this.FoodDisplay.DataSource = _food_controller.getAllFood(); // EBBEN LESZNEK A CUCCOK, MAJD MINDIG FRISSíTENI KELL A VIEW-T
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+
+            CloseThis.BackColor = Color.FromArgb(87, 81, 81);
+            CloseThis.FlatStyle = FlatStyle.Flat;
+            CloseThis.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            ClearBasketButton.FlatStyle = FlatStyle.Flat;
+            ClearBasketButton.FlatAppearance.BorderSize = 0;
+
 
 
 
@@ -128,7 +143,7 @@ namespace R8ZAAJ.Views
 
         private void OrderBasket(object sender, EventArgs e)
         {
-            if(Form1.loggedInUser.Basket.Count != 0 && Form1.loggedInUser.Basket.Count != null)
+            if (Form1.loggedInUser.Basket.Count != 0 && Form1.loggedInUser.Basket.Count != null)
             {
                 _food_controller.MakeAnOrder(Form1.loggedInUser);
                 CustomPrompt prompt = new CustomPrompt("All the foods are ordered!");
