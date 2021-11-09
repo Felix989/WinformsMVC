@@ -43,8 +43,10 @@ namespace R8ZAAJ.Views
             this.PriceTag = new System.Windows.Forms.Label();
             this.CloseThis = new System.Windows.Forms.Button();
             this.ClearBasketButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FoodDisplay
@@ -62,7 +64,7 @@ namespace R8ZAAJ.Views
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Location = new System.Drawing.Point(260, 330);
+            this.button1.Location = new System.Drawing.Point(11, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 47);
             this.button1.TabIndex = 1;
@@ -73,7 +75,7 @@ namespace R8ZAAJ.Views
             // Basket
             // 
             this.Basket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Basket.Location = new System.Drawing.Point(392, 330);
+            this.Basket.Location = new System.Drawing.Point(143, 18);
             this.Basket.Name = "Basket";
             this.Basket.ReadOnly = true;
             this.Basket.RowTemplate.Height = 25;
@@ -104,7 +106,7 @@ namespace R8ZAAJ.Views
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(260, 393);
+            this.button2.Location = new System.Drawing.Point(11, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 47);
             this.button2.TabIndex = 5;
@@ -176,7 +178,7 @@ namespace R8ZAAJ.Views
             // ClearBasketButton
             // 
             this.ClearBasketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
-            this.ClearBasketButton.Location = new System.Drawing.Point(272, 456);
+            this.ClearBasketButton.Location = new System.Drawing.Point(25, 141);
             this.ClearBasketButton.Name = "ClearBasketButton";
             this.ClearBasketButton.Size = new System.Drawing.Size(87, 27);
             this.ClearBasketButton.TabIndex = 12;
@@ -184,24 +186,33 @@ namespace R8ZAAJ.Views
             this.ClearBasketButton.UseVisualStyleBackColor = false;
             this.ClearBasketButton.Click += new System.EventHandler(this.ClearBasketButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ClearBasketButton);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Basket);
+            this.panel1.Location = new System.Drawing.Point(236, 303);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(571, 200);
+            this.panel1.TabIndex = 13;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(822, 515);
-            this.Controls.Add(this.ClearBasketButton);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.CloseThis);
             this.Controls.Add(this.PriceTag);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SelectedFoodDisplay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Basket);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.FoodDisplay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeView";
@@ -210,6 +221,7 @@ namespace R8ZAAJ.Views
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomeView_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +242,6 @@ namespace R8ZAAJ.Views
         private System.Windows.Forms.Label PriceTag;
         private System.Windows.Forms.Button CloseThis;
         private System.Windows.Forms.Button ClearBasketButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
