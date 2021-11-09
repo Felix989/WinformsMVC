@@ -42,6 +42,7 @@ namespace R8ZAAJ.Views
             this.label4 = new System.Windows.Forms.Label();
             this.PriceTag = new System.Windows.Forms.Label();
             this.CloseThis = new System.Windows.Forms.Button();
+            this.ClearBasketButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FoodDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Basket)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@ namespace R8ZAAJ.Views
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button1.Location = new System.Drawing.Point(581, 353);
+            this.button1.Location = new System.Drawing.Point(581, 332);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 47);
             this.button1.TabIndex = 1;
@@ -103,7 +104,7 @@ namespace R8ZAAJ.Views
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(581, 432);
+            this.button2.Location = new System.Drawing.Point(581, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 47);
             this.button2.TabIndex = 5;
@@ -172,12 +173,24 @@ namespace R8ZAAJ.Views
             this.CloseThis.UseVisualStyleBackColor = true;
             this.CloseThis.Click += new System.EventHandler(this.CloseWindow);
             // 
+            // ClearBasketButton
+            // 
+            this.ClearBasketButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(176)))), ((int)(((byte)(98)))));
+            this.ClearBasketButton.Location = new System.Drawing.Point(593, 458);
+            this.ClearBasketButton.Name = "ClearBasketButton";
+            this.ClearBasketButton.Size = new System.Drawing.Size(87, 27);
+            this.ClearBasketButton.TabIndex = 12;
+            this.ClearBasketButton.Text = "Clear Basket";
+            this.ClearBasketButton.UseVisualStyleBackColor = false;
+            this.ClearBasketButton.Click += new System.EventHandler(this.ClearBasketButton_Click);
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(1148, 515);
+            this.Controls.Add(this.ClearBasketButton);
             this.Controls.Add(this.CloseThis);
             this.Controls.Add(this.PriceTag);
             this.Controls.Add(this.label4);
@@ -216,5 +229,6 @@ namespace R8ZAAJ.Views
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label PriceTag;
         private System.Windows.Forms.Button CloseThis;
+        private System.Windows.Forms.Button ClearBasketButton;
     }
 }

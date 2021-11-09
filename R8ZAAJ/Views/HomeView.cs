@@ -2,6 +2,7 @@
 using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -159,6 +160,16 @@ namespace R8ZAAJ.Views
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void ClearBasketButton_Click(object sender, EventArgs e)
+        {
+            Form1.loggedInUser.Basket = new List<Food>();
+
+            bs.DataSource = Form1.loggedInUser.Basket;
+            this.Basket.DataSource = bs;
+            bs.ResetBindings(false);
+            this.Basket.Update();
         }
     }
 }
