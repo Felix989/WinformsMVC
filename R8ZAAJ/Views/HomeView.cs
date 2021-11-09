@@ -99,9 +99,7 @@ namespace R8ZAAJ.Views
 #pragma warning disable CS0472
             if (SelectedFood != null && SelectedFood != 2147483647)
             {
-               
-                var foods = _food_controller.getAllFood();
-                var selected = foods.First(x => x.ID == SelectedFood);
+                var selected = _food_controller.getAllFood().First(x => x.ID == SelectedFood);
 
                 for (int i = 0; i < amountCounter.Value; i++)
                 {
