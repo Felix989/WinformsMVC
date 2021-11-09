@@ -107,7 +107,7 @@ namespace R8ZAAJ.Views
                 {
                     Form1.loggedInUser.Basket.Add(selected);
                 }
-
+                amountCounter.Value = 1;
                 bs.DataSource = Form1.loggedInUser.Basket;
                 this.Basket.DataSource = bs;
                 bs.ResetBindings(false);
