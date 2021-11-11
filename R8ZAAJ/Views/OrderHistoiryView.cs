@@ -1,6 +1,7 @@
 ﻿using R8ZAAJ.Controls;
 using R8ZAAJ.DAO.OrderDAO;
 using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -38,8 +39,15 @@ namespace R8ZAAJ.Views
             BackButton.FlatAppearance.BorderSize = 0;
             _food_controller = new(new OrderSQLiteDAO());
             this._binding = new();
-            this._binding.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser);
-            this.HistoricGrid.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser);
+
+
+            foreach (DataGridViewColumn column in HistoricGrid.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.Automatic;
+            }
+
+            this._binding.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser).OrderByDescending(x => x.LoyaltyPoints).ToList();
+            this.HistoricGrid.DataSource = _food_controller.getAllOrdersByUser(Form1.loggedInUser).OrderByDescending(x => x.LoyaltyPoints).ToList();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
@@ -51,6 +59,9 @@ namespace R8ZAAJ.Views
 
             this.HistoricGrid.Columns["LoyaltyPoints"].Visible = false;
             this.HistoricGrid.Columns["Name"].Width = 290;
+
+
+
         }
 
         private void Back(object sender, EventArgs e)
