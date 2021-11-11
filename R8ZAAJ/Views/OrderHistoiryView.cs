@@ -59,9 +59,6 @@ namespace R8ZAAJ.Views
 
             this.HistoricGrid.Columns["LoyaltyPoints"].Visible = false;
             this.HistoricGrid.Columns["Name"].Width = 290;
-
-
-
         }
 
         private void Back(object sender, EventArgs e)
