@@ -58,6 +58,19 @@ namespace R8ZAAJ.DAO.OrderDAO
                 foodHolder.Add(food);
             }
             conn.Close();
+            
+            foreach (var food in foodHolder)
+            {
+                var count = 0;
+                foreach (var foodtwo in foodHolder)
+                {
+                    if(food.ID == foodtwo.ID)
+                    {
+                        count++;
+                    }
+                }
+                food.LoyaltyPoints *= count;
+            }
             return foodHolder;
         }
 
