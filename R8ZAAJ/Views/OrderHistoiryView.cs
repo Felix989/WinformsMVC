@@ -48,6 +48,9 @@ namespace R8ZAAJ.Views
             //    CustomPrompt prompt = new CustomPrompt("No historical orders were found!");
             //    prompt.ShowDialog();
             //}
+
+            this.HistoricGrid.Columns["LoyaltyPoints"].Visible = false;
+            this.HistoricGrid.Columns["Name"].Width = 290;
         }
 
         private void Back(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using R8ZAAJ.DAO.OrderDAO;
 using R8ZAAJ.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -41,11 +42,19 @@ namespace R8ZAAJ.Views
             _food_controller = new(new OrderSQLiteDAO());
             this._binding = new();
             this._binding.DataSource = _food_controller.getAllFood();
-            this.FoodDisplay.DataSource = _food_controller.getAllFood(); // EBBEN LESZNEK A CUCCOK, MAJD MINDIG FRISSíTENI KELL A VIEW-T
+            this.FoodDisplay.DataSource = _food_controller.getAllFood();
             this.FormBorderStyle = FormBorderStyle.None;
+
+
+            //var list = _food_controller.getAllFood().OrderBy(x => x.LoyaltyPoints).ToList();
+            //var bs = new BindingSource();
+            //bs.DataSource = list;
+            //FoodDisplay.DataSource = bs;
+
+            //FoodDisplay.Sort(FoodDisplay.Columns[5], ListSortDirection.Descending);
+            
+            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-
             CloseThis.BackColor = Color.FromArgb(87, 81, 81);
             CloseThis.FlatStyle = FlatStyle.Flat;
             CloseThis.FlatAppearance.BorderSize = 0;
@@ -68,6 +77,9 @@ namespace R8ZAAJ.Views
             //this.Basket.DataSource = Form1.loggedInUser.Basket;
 
             CalculateBasketsWorth(Form1.loggedInUser);
+            this.FoodDisplay.Columns["LoyaltyPoints"].Visible = false;
+            this.Basket.Columns["LoyaltyPoints"].Visible = false;
+            this.FoodDisplay.Columns["Name"].Width = 330;
         }
 
 
