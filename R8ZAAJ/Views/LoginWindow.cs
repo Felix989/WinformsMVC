@@ -94,7 +94,7 @@ namespace R8ZAAJ
                 }
                 else
                 {
-                    CustomPrompt prompt = new CustomPrompt(register.Username + " was not registered!");
+                    CustomPrompt prompt = new CustomPrompt(register.Username + " username is already occupied!");
                     prompt.ShowDialog();
                     new Exception("Cannot register user!");
                 }

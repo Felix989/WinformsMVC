@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Linq;
 
 namespace R8ZAAJ.DAO
 {
@@ -39,7 +40,6 @@ namespace R8ZAAJ.DAO
         public bool LogInUser(User user)
         {
             bool retbool = false;
-
             using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
             conn.Open();
             using SQLiteCommand command = new("select ID from Users where UserName = @un and Password = @pw", conn);
@@ -54,24 +54,33 @@ namespace R8ZAAJ.DAO
                 retbool = true;
                 conn.Close();
             }
+
             return retbool;
         }
 
         public bool RegisterUser(User user)
         {
-            using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
-            conn.Open();
-            using SQLiteCommand command = new("insert into Users(UserName, Password) Values(@un, @pw)", conn);
-            command.Parameters.AddWithValue("@un", user.Username);
-            command.Parameters.AddWithValue("@pw", user.Password);
-            command.Prepare();
-            if (command.ExecuteNonQuery() <= 0)
+
+            var userList = GetAllUser();
+            var userListName = userList.Select(x => x.Username);
+
+            if (!userListName.Contains(user.Username))
             {
-                conn.Close();
-                return false;
+
+                using SQLiteConnection conn = new SQLiteConnection(_ConnectionString);
+                conn.Open();
+                using SQLiteCommand command = new("insert into Users(UserName, Password) Values(@un, @pw)", conn);
+                command.Parameters.AddWithValue("@un", user.Username);
+                command.Parameters.AddWithValue("@pw", user.Password);
+                command.Prepare();
+                if (command.ExecuteNonQuery() <= 0)
+                {
+                    conn.Close();
+                    return false;
+                }
+                return true;
             }
-            conn.Close();
-            return true;
+            return false;
         }
     }
 }
