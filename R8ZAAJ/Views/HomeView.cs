@@ -100,7 +100,7 @@ namespace R8ZAAJ.Views
             if (FoodDisplay.SelectedRows.Count > 0)
             {
                 SelectedFood = Convert.ToInt32(FoodDisplay.SelectedRows[0].Cells["ID"].Value.ToString());
-                string name = FoodDisplay.SelectedRows[0].Cells["FoodName"].Value.ToString();
+                string name = FoodDisplay.SelectedRows[0].Cells["Name"].Value.ToString();
 
                 SelectedFoodDisplay.Text = name;
             }
