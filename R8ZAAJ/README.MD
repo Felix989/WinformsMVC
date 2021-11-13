@@ -3,4 +3,6 @@ Connection Stringet át kell írni két helyen: "OrderSQLiteDAO" és  "UserSQLit
 Loyalty Pointsok minden ételnél eltérő, minden megrendelt ételnek más mennyiségű rewardja van.
 Minél többet rendelünk egy adott ételből annyival több loyalty-pointot ér.
 Minél több loyalty pontot ér, annál feljebb kerül a historikus megjelenítésben az étel.
-Loyalty ponttól függően megy le a rendelés várható kiszállítási ideje, max 30%-kal.
+Loyalty ponttól függően megy le a rendelés várható kiszállítási ideje, max 30%-kal, csakis abból az ételből, ami többször lett rendelve.
+
+Project repo: https://github.com/Felix989/WinformsMVC.git
