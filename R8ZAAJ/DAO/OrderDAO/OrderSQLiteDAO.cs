@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.IO;
 
 namespace R8ZAAJ.DAO.OrderDAO
 {
     class OrderSQLiteDAO : IOrderDao
     {
-        private readonly String _ConnectionString = @"Data Source = C:\DATA\Programming\GIT\WinformsMVC - GIT\R8ZAAJ\Database\Pizz.db";
+        private readonly String _ConnectionString = "Data Source=" + Path.Join(AppContext.BaseDirectory.Replace("bin\\Debug\\net5.0-windows\\", ""), @"Database\Pizz.db; Version = 3");
         public List<Food> getAllFood()
         {
             List<Food> foodHolder = new List<Food>();
